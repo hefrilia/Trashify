@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,14 +20,29 @@
         android:theme="@style/Theme.Trashify"
         tools:targetApi="31">
         <activity
-            android:name=".ui.ScanResult"
+            android:name=".ui.LeaderboardActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ClasificationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_clasification"
+            android:theme="@style/Theme.Trashify" />
+        <activity
+            android:name=".ui.AddStoryActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".ui.ScanResult" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".ui.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".ui.LoginActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
         <activity
             android:name=".ui.WelcomeActivity"
             android:exported="false" />

@@ -1,26 +1,25 @@
-import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
-import com.example.trashify.databinding.ActivityLoginBinding
-import com.example.trashify.model.LoginViewModel
-import com.example.trashify.ui.RegisterActivity
-
 package com.example.trashify.ui
-
 import android.Manifest
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.example.trashify.MainActivity
+import com.example.trashify.ViewModelFactory
+import com.example.trashify.components.ButtonCustom
 import com.example.trashify.databinding.ActivityLoginBinding
+import com.example.trashify.helper.requestPermissionLauncher
+import com.example.trashify.model.AuthViewModel
 import com.example.trashify.model.LoginViewModel
+import com.example.trashify.preferences.AuthPreferences
+import com.example.trashify.preferences.dataStore
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    private lateinit var button: Button
+    private lateinit var button: ButtonCustom
     private lateinit var loginViewModel: LoginViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,10 +70,10 @@ class LoginActivity : AppCompatActivity() {
 
         tokenViewModel.getToken().observe(this) {
             if (it.token != "" && it.token?.isNotEmpty() == true) {
-                val intentDetail = Intent(this, ListStoryActivity::class.java)
+                val intentDetail = Intent(this, MainActivity::class.java)
                 intentDetail.flags =
                     Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                intentDetail.putExtra(ListStoryActivity.TOKEN_INTENT_KEY, it)
+                intentDetail.putExtra(MainActivity.TOKEN_INTENT_KEY, it)
                 startActivity(intentDetail)
             }
         }
