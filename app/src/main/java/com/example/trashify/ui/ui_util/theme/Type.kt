@@ -1,4 +1,4 @@
-package com.example.trashify.ui.ui.theme
+package com.example.trashify.ui.ui_util.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

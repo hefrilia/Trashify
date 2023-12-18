@@ -51,7 +51,7 @@ import coil.compose.AsyncImage
 import com.example.trashify.data.response.CraftingResponse
 import com.example.trashify.data.retrofit.RetrofitInstance
 import com.example.trashify.ml.ConvertedModel
-import com.example.trashify.ui.ui.theme.TrashifyTheme
+import com.example.trashify.ui.ui_util.theme.TrashifyTheme
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

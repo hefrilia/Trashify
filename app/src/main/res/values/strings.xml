@@ -30,4 +30,18 @@
     <string name="title_activity_home_page">HomePageActivity</string>
     <string name="scan_here"> Scan Here</string>
     <string name="text_scan">You can classify your waste here to receive recommendations for creative projects you can make.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_home">Home</string>
+    <string name="title_leaderboard">Leaderboard</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="post_headline">POST</string>
+    <string name="more_post">More</string>
+    <string name="image_photo">Photo</string>
+    <string name="username">Username</string>
+    <string name="desc_post">This is Description of Post</string>
+    <string name="likes">200 Likes</string>
 </resources>

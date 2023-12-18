@@ -1,4 +1,4 @@
-package com.example.trashify.ui.ui.theme
+package com.example.trashify.ui.ui_util.theme
 
 import android.app.Activity
 import android.os.Build
