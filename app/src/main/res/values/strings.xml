@@ -11,4 +11,15 @@
     <string name="hint_name">Name</string>
     <string name="hint_password">Password</string>
     <string name="hint_email">Email</string>
+    <string name="result">Result:</string>
+    <string name="persentase">0% Material</string>
+    <string name="judul_tutor">Judul Tutorial</string>
+    <string name="tutorial">Ini tutorial</string>
+    <string name="btn_camera">Camera</string>
+    <string name="btn_galery">Galery</string>
+    <string name="description">Description</string>
+    <string name="title_activity_clasification">ClasificationActivity</string>
+    <string name="title_activity_home_page">HomePageActivity</string>
+    <string name="scan_here"> Scan Here</string>
+    <string name="text_scan">You can classify your waste here to receive recommendations for creative projects you can make.</string>
 </resources>
