@@ -11,4 +11,12 @@
     <string name="hint_name">Name</string>
     <string name="hint_password">Password</string>
     <string name="hint_email">Email</string>
+    <string name="trashify">Trashify</string>
+    <string name="trashify_desc">Make Your Trash to be Creative Products</string>
+    <string name="image_welcome">image_welcome</string>
+    <string name="title_menu1">Welcome!</string>
+    <string name="description_menu1">Trashify is an application designed to address urgent environmental issues in Indonesia, specifically improper waste disposal</string>
+    <string name="title_menu2">Let’s Start!</string>
+    <string name="description_menu2">Let’s start! Your journey to a cleaner, greener Indonesia begins here. Let\'s Trashify for a better future!</string>
+    <string name="start_now">Start Now</string>
 </resources>
