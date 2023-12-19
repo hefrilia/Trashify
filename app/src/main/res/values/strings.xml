@@ -44,4 +44,7 @@
     <string name="username">Username</string>
     <string name="desc_post">This is Description of Post</string>
     <string name="likes">200 Likes</string>
+    <string name="todo">TODO</string>
+    <string name="title_post">POST</string>
+    <string name="fab">FAB</string>
 </resources>
