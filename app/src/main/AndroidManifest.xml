@@ -20,18 +20,18 @@
         android:theme="@style/Theme.Trashify"
         tools:targetApi="31">
         <activity
+            android:name=".ui.ui_post.add_post.AddPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ui_post.DetailPostActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.ui_post.PostActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main" />
-        <activity
-            android:name=".ui.LeaderboardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.ProfileActivity"
-            android:exported="false" />
         <activity
             android:name=".ui.ClasificationActivity"
             android:exported="false"

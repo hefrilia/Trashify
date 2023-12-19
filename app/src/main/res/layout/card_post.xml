@@ -20,7 +20,7 @@
         <ImageView
             android:id="@+id/img_photo"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:contentDescription="@string/image_photo"
             android:scaleType="centerCrop"
             card_view:layout_constraintEnd_toEndOf="parent"

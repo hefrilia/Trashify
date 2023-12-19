@@ -98,4 +98,7 @@ dependencies {
     //shared preferences
     implementation("hu.autsoft:krate:2.0.0")
 
+    // Refresh
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
 }

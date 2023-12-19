@@ -47,4 +47,7 @@
     <string name="todo">TODO</string>
     <string name="title_post">POST</string>
     <string name="fab">FAB</string>
+    <string name="title_detail_post">DETAIL POST</string>
+    <string name="btn_galeri">Gallery</string>
+    <string name="title_upload_post">UPLOAD POST</string>
 </resources>
