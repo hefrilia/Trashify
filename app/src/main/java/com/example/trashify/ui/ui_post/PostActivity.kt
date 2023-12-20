@@ -69,7 +69,7 @@ class PostActivity : AppCompatActivity() {
             intent.getSerializableExtra((TOKEN_INTENT_KEY)) as AuthData
         }
 
-        storyViewModel = ViewModelProvider(this, ViewModelFactoryPost(this, token?.token))[PostViewModel::class.java]
+        storyViewModel = ViewModelProvider(this, ViewModelFactoryPost(this, token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWRJLTgyVENTb0tpbk1uUTYiLCJpYXQiOjE3MDMwOTA5NDR9.MMFJx06LQ_ndzETprqTx-kOMB7cXKojY5WhZmuY8xNM"))[PostViewModel::class.java]
 
         getData()
 
@@ -86,6 +86,10 @@ class PostActivity : AppCompatActivity() {
             binding.swipeRefresh.isRefreshing = true
             getData()
             Toast.makeText(this, "List stories refreshed", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.iconBack.setOnClickListener {
+            finish()
         }
     }
 

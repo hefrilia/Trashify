@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_leaderboard" />
 
     <fragment
+        android:id="@+id/navigation_community"
+        android:name="com.example.trashify.ui.ui_fragment.community.CommunityFragment"
+        android:label="@string/title_community"
+        tools:layout="@layout/fragment_community" />
+
+    <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.trashify.ui.ui_fragment.profile.ProfileFragment"
         android:label="@string/title_profile"

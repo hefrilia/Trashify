@@ -50,4 +50,6 @@
     <string name="title_detail_post">DETAIL POST</string>
     <string name="btn_galeri">Gallery</string>
     <string name="title_upload_post">UPLOAD POST</string>
+    <string name="title_community">Community</string>
+    <string name="title_detail_picture">DETAIL PICTURE</string>
 </resources>

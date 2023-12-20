@@ -20,6 +20,9 @@
         android:theme="@style/Theme.Trashify"
         tools:targetApi="31">
         <activity
+            android:name=".ui.ui_post.ImageViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.ui_post.add_post.AddPostActivity"
             android:exported="false" />
         <activity
@@ -37,9 +40,7 @@
             android:exported="false"
             android:label="@string/title_activity_clasification"
             android:theme="@style/Theme.Trashify" />
-        <activity
-            android:name=".ui.AddStoryActivity"
-            android:exported="false" /> <!-- <activity -->
+        <!-- <activity -->
         <!-- android:name=".ui.ScanResult" -->
         <!-- android:exported="false" /> -->
         <activity

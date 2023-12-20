@@ -44,9 +44,6 @@
 
         </LinearLayout>
 
-
-
-
     </androidx.appcompat.widget.Toolbar>
 
     <ImageView

@@ -132,7 +132,7 @@ class ClasificationActivity : ComponentActivity() {
                     }
                     try {
                         tutorialData =
-                            client.get("https://backend-dot-trashifycapstone.et.r.appspot.com/${material.lowercase()}")
+                            client.get("https://backend-dot-trashifycapstone.et.r.appspot.com/tutorial/${material.lowercase()}")
                                 .body()
 
                     } catch (e: Exception) {

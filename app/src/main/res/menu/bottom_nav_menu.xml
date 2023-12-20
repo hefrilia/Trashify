@@ -12,6 +12,11 @@
         android:title="@string/title_leaderboard" />
 
     <item
+        android:id="@+id/navigation_community"
+        android:icon="@drawable/ic_community"
+        android:title="@string/title_community" />
+
+    <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/baseline_person_24"
         android:title="@string/title_profile" />
