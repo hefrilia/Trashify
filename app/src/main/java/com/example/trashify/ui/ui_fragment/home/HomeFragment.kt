@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.trashify.databinding.FragmentHomeBinding
 import com.example.trashify.ui.ClasificationActivity
@@ -28,15 +27,10 @@ class HomeFragment : Fragment() {
         return binding?.root
     }
 
-    @Suppress("DEPRECATION")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         prefsManager = PrefsManager(requireContext())
-        (activity as AppCompatActivity).apply {
-            setSupportActionBar(binding?.toolbar)
-        }
 
-        setHasOptionsMenu(true)
         // Intent to Scan
         binding?.imageButton?.setOnClickListener {
             startActivity(Intent(requireContext(), ClasificationActivity::class.java))
