@@ -16,15 +16,15 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = primary,
-    secondary = green_btn1,
-    tertiary = white
+    primary = GreenBtn1,
+    secondary = Primary1,
+    tertiary = WhiteCust
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = primary,
-    secondary = green_btn2,
-    tertiary = black
+    primary = GreenBtn1,
+    secondary = Primary1,
+    tertiary = WhiteCust
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),

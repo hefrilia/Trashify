@@ -9,4 +9,8 @@ class DetailPostActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_post)
     }
+
+    companion object{
+        const val DETAIL_INTENT_KEY ="DETAIL FOR POST"
+    }
 }

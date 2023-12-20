@@ -1,18 +1,12 @@
 package com.example.trashify.ui.ui_fragment.home
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.Typeface
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.trashify.R
 import com.example.trashify.databinding.FragmentHomeBinding
 import com.example.trashify.ui.ClasificationActivity
 import com.example.trashify.ui.ui_post.PostActivity
@@ -34,6 +28,7 @@ class HomeFragment : Fragment() {
         return binding?.root
     }
 
+    @Suppress("DEPRECATION")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         prefsManager = PrefsManager(requireContext())

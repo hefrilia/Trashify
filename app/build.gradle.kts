@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -45,7 +45,7 @@ android {
         jvmTarget = "1.8"
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.5.2"
     }
     packaging {
         resources {
@@ -53,6 +53,9 @@ android {
         }
     }
 }
+
+// Clasification Version
+val ktorVersion = "2.3.6"
 
 dependencies {
 
@@ -63,7 +66,7 @@ dependencies {
     implementation("org.tensorflow:tensorflow-lite-support:0.1.0")
     implementation("org.tensorflow:tensorflow-lite-metadata:0.1.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-    implementation("androidx.activity:activity-compose:1.8.2")
+    implementation("androidx.activity:activity-compose:1.8.1")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
@@ -71,8 +74,6 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("com.google.firebase:firebase-crashlytics-buildtools:2.9.9")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
 //    implementation("com.google.android.ads:mediation-test-suite:3.0.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -93,12 +94,36 @@ dependencies {
 
     implementation("io.coil-kt:coil-compose:2.1.0")
 
-    // implementation ("com.google.android.gms:play-services-ads:22.6.0")
+//    implementation ("com.google.android.gms:play-services-ads:22.6.0")
+
+    // Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-compose:2.5.3")
 
     //shared preferences
     implementation("hu.autsoft:krate:2.0.0")
 
     // Refresh
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+    // Pagging
+    implementation("androidx.paging:paging-runtime-ktx:3.2.1")
+    implementation("androidx.room:room-paging:2.6.1")
+
+    // Image
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation ("com.squareup.picasso:picasso:2.71828")
+
+    // Room
+    implementation("androidx.room:room-paging:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+
+    // For clasification
+    implementation("io.ktor:ktor-client-core:$ktorVersion")
+    implementation("io.ktor:ktor-client-cio:$ktorVersion")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
 
 }

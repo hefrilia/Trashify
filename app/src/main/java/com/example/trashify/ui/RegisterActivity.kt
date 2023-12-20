@@ -22,8 +22,6 @@ class RegisterActivity : AppCompatActivity() {
 
         checkIsNotEmpty()
 
-        val loginText = binding.buttonId
-
         registerViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[RegisterViewModel::class.java]
 
         registerViewModel.auth.observe(this){
@@ -41,7 +39,7 @@ class RegisterActivity : AppCompatActivity() {
             setButtonLoading(it)
         }
 
-        binding.registerId.setOnClickListener() {
+        binding.buttonId.setOnClickListener() {
             val intentDetail = Intent(this, LoginActivity::class.java)
             intentDetail.flags = Intent.FLAG_ACTIVITY_NEW_TASK or  Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intentDetail)
@@ -101,10 +99,6 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-        loginText.setOnClickListener {
-            val intentDetail = Intent(this, RegisterActivity::class.java)
-            startActivity(intentDetail)
-        }
     }
 
     private fun setButtonEnable(value: Boolean){
