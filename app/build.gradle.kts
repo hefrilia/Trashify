@@ -113,7 +113,9 @@ dependencies {
     implementation("androidx.room:room-paging:2.6.1")
 
     // Image
+    implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.13.0")
     implementation ("com.squareup.picasso:picasso:2.71828")
 
     // Room

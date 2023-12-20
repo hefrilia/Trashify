@@ -30,7 +30,6 @@
     <string name="title_activity_home_page">HomePageActivity</string>
     <string name="scan_here"> Scan Here</string>
     <string name="text_scan">You can classify your waste here to receive recommendations for creative projects you can make.</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_home">Home</string>
     <string name="title_leaderboard">Leaderboard</string>
@@ -38,18 +37,21 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="post_headline">POST</string>
+    <string name="post_headline">Post</string>
     <string name="more_post">More</string>
     <string name="image_photo">Photo</string>
     <string name="username">Username</string>
     <string name="desc_post">This is Description of Post</string>
     <string name="likes">200 Likes</string>
     <string name="todo">TODO</string>
-    <string name="title_post">POST</string>
+    <string name="title_post">Post</string>
     <string name="fab">FAB</string>
-    <string name="title_detail_post">DETAIL POST</string>
+    <string name="title_detail_post">Detail Post</string>
     <string name="btn_galeri">Gallery</string>
-    <string name="title_upload_post">UPLOAD POST</string>
+    <string name="title_upload_post">Upload Post</string>
     <string name="title_community">Community</string>
-    <string name="title_detail_picture">DETAIL PICTURE</string>
+    <string name="title_detail_picture">Detail Picture</string>
+    <string name="hai">Hai, </string>
+    <string name="change_langguage">Change Langguage</string>
+    <string name="logout">Logout</string>
 </resources>
