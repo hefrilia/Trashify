@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment
 import com.example.trashify.R
 import com.example.trashify.databinding.FragmentProfileBinding
 import com.example.trashify.model.AuthViewModel
-import com.example.trashify.ui.LoginActivity
 import com.example.trashify.ui.WelcomeActivity
 
 class ProfileFragment : Fragment() {

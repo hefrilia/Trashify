@@ -54,8 +54,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -462,29 +465,53 @@ class ClasificationActivity : ComponentActivity() {
                                         ) {
                                             Box(
                                                 modifier = Modifier
-                                                    .fillMaxWidth(0.9f) //90%
-                                                    .fillMaxHeight(0.6f) //60%
+                                                    .fillMaxWidth(1f) //90%
+                                                    .fillMaxHeight(1f)
+                                                    .height(LocalConfiguration.current.screenWidthDp.dp)//60%
                                             ){
                                                 AsyncImage(
                                                     model = selectedImageHD,
                                                     contentDescription = null,
+                                                    contentScale = ContentScale.Crop,
                                                     modifier = Modifier
                                                         .fillMaxSize()
                                                 )
                                             }
 
                                             Text(
+                                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp),
                                                 text = predictionResult.let { result ->
                                                     highestPercentage.let { percentage ->
                                                         "$result : $percentage"
                                                     }
-                                                } ?: "Default Text"
+                                                } ?: "Default Text",
+                                                style = TextStyle(
+                                                    fontSize = 18.sp, // Set text size
+                                                    fontWeight = FontWeight.Bold, // Set font weight
+                                                    color = Color.Black // Set text color
+                                                )
                                             )
                                             // isi data dari tutorial api
                                             tutorialData?.let { data ->
-                                                Text(text = data.Judul)
+                                                Text(
+                                                    modifier = Modifier.padding(horizontal = 10.dp),
+                                                    text = data.Judul,
+                                                    style = TextStyle(
+                                                        fontSize = 18.sp, // Set text size
+                                                        fontWeight = FontWeight.Bold, // Set font weight
+                                                        color = Color.Black // Set text color
+                                                    )
+                                                )
                                                 TextList(texts = data.Bahan)
-                                                Text(text = "Steps :")
+                                                Text(
+                                                    modifier = Modifier.padding(horizontal = 10.dp),
+                                                    text = "Steps :",
+                                                    style = TextStyle(
+                                                        fontSize = 18.sp, // Set text size
+                                                        fontWeight = FontWeight.Bold, // Set font weight
+                                                        color = Color.Black // Set text color
+                                                    )
+                                                )
                                                 // Modify the list by adding a prefix to each item
                                                 val modifiedList =
                                                     data.Steps["Step 1"]?.mapIndexed { index, text -> "Step ${index + 1}: $text" }
@@ -492,7 +519,14 @@ class ClasificationActivity : ComponentActivity() {
                                                 if (modifiedList != null) {
                                                     TextList(modifiedList)
                                                 }
-                                                Text(text = data.linkYt)
+                                                Text(
+                                                    modifier = Modifier.padding(horizontal = 10.dp),
+                                                    text = data.linkYt,
+                                                    style = TextStyle(
+                                                        fontSize = 18.sp, // Set text size
+                                                        color = Color.Blue // Set text color
+                                                    )
+                                                )
                                             }
                                         }
                                     }
@@ -526,19 +560,30 @@ class ClasificationActivity : ComponentActivity() {
 
 @Composable
 fun TextList(texts: List<String>) {
-    Column {
-        texts.forEach { text ->
-            ListItem(text = text)
+    Box(
+        modifier = Modifier.padding(16.dp)
+    ){
+        Column {
+            texts.forEach { text ->
+                ListItem(text = text)
+            }
         }
     }
 }
 
 @Composable
-fun ListItem(text: String) {
+fun ListItem(
+    text: String
+) {
     Text(
         text = text,
-
-        )
+        style = TextStyle(
+            color = Color.Black, // Set text color
+            fontSize = 16.sp, // Set text size
+            fontStyle = FontStyle.Normal // Set font style
+        ),
+        modifier = Modifier.padding(8.dp)
+    )
 }
 
 @Composable
